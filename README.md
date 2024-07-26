@@ -1,3 +1,3 @@
-# goit-pycore-hw-06
+# goit-pycore-hw-07
 
-Homework 6. Python Programming: Foundations and Best Practices 2.0 at GoIT Neoversity
+Homework 7. Python Programming: Foundations and Best Practices 2.0 at GoIT Neoversity
