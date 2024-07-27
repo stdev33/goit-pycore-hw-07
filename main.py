@@ -1,17 +1,18 @@
 import bot.actions as actions
 import bot.helpers as helpers
+from bot.addressbook import AddressBook
 
 
 def main():
-    contacts = {}
+    book = AddressBook()
     print("Welcome to the assistant bot!")
 
     command_handlers = {
         "hello": lambda args: actions.hello(),
-        "add": lambda args: actions.add_contact(args, contacts),
-        "change": lambda args: actions.change_contact(args, contacts),
-        "phone": lambda args: actions.show_phone(args, contacts),
-        "all": lambda args: actions.show_all(contacts),
+        "add": lambda args: actions.add_contact(args, book),
+        "change": lambda args: actions.change_contact(args, book),
+        "phone": lambda args: actions.show_phone(args, book),
+        "all": lambda args: actions.show_all(book),
         "exit": lambda args: actions.exit_bot(),
         "close": lambda args: actions.exit_bot(),
     }

@@ -1,11 +1,13 @@
 from .phone import Phone
 from .name import Name
+from .birthday import Birthday
 
 
 class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
+        self.birthday = None
 
     def add_phone(self, phone_number):
         phone = Phone(phone_number)
@@ -27,5 +29,9 @@ class Record:
                 return phone
         raise ValueError("Phone number not found")
 
+    def add_birthday(self, birthday):
+        self.birthday = Birthday(birthday)
+
     def __str__(self):
-        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
+        birthday_str = f", birthday: {self.birthday}" if self.birthday else ""
+        return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}{birthday_str}"

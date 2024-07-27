@@ -12,6 +12,9 @@ john_record.add_phone("5555555555")
 # Додавання запису John до адресної книги
 book.add_record(john_record)
 
+# Додавання дня народження для John
+john_record.add_birthday("28.07.1990")
+
 # Створення та додавання нового запису для Jane
 jane_record = Record("Jane")
 jane_record.add_phone("9876543210")
@@ -32,3 +35,7 @@ print(f"{john.name}: {found_phone}")  # Виведення: 5555555555
 
 # Видалення запису Jane
 book.delete("Jane")
+
+# Тест пошуку днів народження на найближчий тиждень
+for birthday in book.get_upcoming_birthdays():
+    print(f"Upcoming birthday: {birthday}")
