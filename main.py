@@ -13,6 +13,9 @@ def main():
         "change": lambda args: actions.change_contact(args, book),
         "phone": lambda args: actions.show_phone(args, book),
         "all": lambda args: actions.show_all(book),
+        "add-birthday": lambda args: actions.add_birthday(args, book),
+        "show-birthday": lambda args: actions.show_birthday(args, book),
+        "birthdays": lambda args: actions.birthdays(args, book),
         "exit": lambda args: actions.exit_bot(),
         "close": lambda args: actions.exit_bot(),
     }
